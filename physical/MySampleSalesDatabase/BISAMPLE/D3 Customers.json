@@ -1,0 +1,24 @@
+{
+  "physicalTable": {
+    "name": "D3 Customers",
+    "sourceTable": "physicalTable:MySampleSalesDatabase.BISAMPLE.SAMP_CUSTOMERS_D",
+    "caching": {
+      "enable": true
+    },
+    "overrideSourceCacheSetting": true,
+    "joins": [      {
+        "rightTable": "physicalTable:MySampleSalesDatabase.BISAMPLE.D4 Addresse",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:MySampleSalesDatabase.BISAMPLE.D3 Customers.ADDRESS_KEY",
+            "rightColumn": "physicalColumn:MySampleSalesDatabase.BISAMPLE.D4 Addresse.ADDRESS_KEY"
+          }
+        ]
+      }
+    ],
+    "additionalKeys": [
+      [
+        "CUST_KEY"
+      ]
+    ]
+  }
+}

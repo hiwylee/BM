@@ -1,0 +1,36 @@
+{
+  "presentationTable" : {
+    "name" : "Basic Facts",
+    "presentationColumns" : [ {
+      "name" : "Units",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.F1 Revenue.Units"
+    }, {
+      "name" : "Revenue",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.F1 Revenue.Revenue"
+    }, {
+      "name" : "Actual Unit Price",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.F1 Revenue.Actual Unit Price"
+    }, {
+      "name" : "Month Ago Revenue",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.F1 Revenue.Month Ago Revenue"
+    }, {
+      "name" : "Product Share",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.F1 Revenue.Product Share"
+    }, {
+      "name" : "Product Total Revenue",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.F1 Revenue.Product Total Revenue"
+    }, {
+      "name" : "Product Type Revenue.",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.F1 Revenue.Product Type Revenue\\."
+    }, {
+      "name" : "Revenue 3 Period Rolling Sum",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.F1 Revenue.Revenue 3 Period Rolling Sum"
+    }, {
+      "name" : "Revenue Rank",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.F1 Revenue.Revenue Rank"
+    }, {
+      "name" : "Year To Date Revenue",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.F1 Revenue.Year To Date Revenue"
+    } ]
+  }
+}

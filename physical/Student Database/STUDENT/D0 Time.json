@@ -1,0 +1,7 @@
+{
+  "physicalTable" : {
+    "name" : "D0 Time",
+    "sourceTable" : "physicalTable:Student Database.STUDENT.CALENDAR",
+    "overrideSourceCacheSetting" : false
+  }
+}

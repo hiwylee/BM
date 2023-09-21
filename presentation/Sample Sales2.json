@@ -1,0 +1,19 @@
+{
+  "subjectArea" : {
+    "name" : "Sample Sales2",
+    "sourceBusinessModel" : "businessModel:Sample Sales BM2",
+    "tableOrder" : [ {
+      "name" : "presentationTable:Sample Sales2.Time"
+    }, {
+      "name" : "presentationTable:Sample Sales2.Products"
+    }, {
+      "name" : "presentationTable:Sample Sales2.Customers"
+    }, {
+      "name" : "presentationTable:Sample Sales2.Basic Facts"
+    }, {
+      "name" : "presentationTable:Sample Sales2.Customer Regions"
+    }, {
+      "name" : "presentationTable:Sample Sales2.Sales Rep"
+    } ]
+  }
+}

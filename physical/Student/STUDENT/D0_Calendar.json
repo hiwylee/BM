@@ -1,0 +1,7 @@
+{
+  "physicalTable" : {
+    "name" : "D0_Calendar",
+    "sourceTable" : "physicalTable:Student.STUDENT.CALENDAR",
+    "overrideSourceCacheSetting" : false
+  }
+}

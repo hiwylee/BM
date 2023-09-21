@@ -1,0 +1,30 @@
+{
+  "presentationTable" : {
+    "name" : "Customers",
+    "presentationColumns" : [ {
+      "name" : "Cust Key",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.D3 Customers.Cust Key"
+    }, {
+      "name" : "Name",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.D3 Customers.Name"
+    }, {
+      "name" : "Area",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.D3 Customers.Area"
+    }, {
+      "name" : "City",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.D3 Customers.City"
+    }, {
+      "name" : "Country Name",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.D3 Customers.Country Name"
+    }, {
+      "name" : "Region",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.D3 Customers.Region"
+    }, {
+      "name" : "State Province",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.D3 Customers.State Province"
+    }, {
+      "name" : "Postal Code",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.D3 Customers.Postal Code"
+    } ]
+  }
+}

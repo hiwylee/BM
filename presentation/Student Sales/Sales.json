@@ -1,0 +1,15 @@
+{
+  "presentationTable" : {
+    "name" : "Sales",
+    "presentationColumns" : [ {
+      "name" : "Units",
+      "sourceLogicalColumn" : "logicalColumn:Student BM.F1 Sales.Units"
+    }, {
+      "name" : "Revenue",
+      "sourceLogicalColumn" : "logicalColumn:Student BM.F1 Sales.Revenue"
+    }, {
+      "name" : "Order Number",
+      "sourceLogicalColumn" : "logicalColumn:Student BM.F1 Sales.Order #"
+    } ]
+  }
+}

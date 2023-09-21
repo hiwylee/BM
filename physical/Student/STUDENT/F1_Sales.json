@@ -1,0 +1,35 @@
+{
+  "physicalTable" : {
+    "name" : "F1_Sales",
+    "sourceTable" : "physicalTable:Student.STUDENT.SALES",
+    "overrideSourceCacheSetting" : false,
+    "joins" : [ {
+      "rightTable" : "physicalTable:Student.STUDENT.D1_Item",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Student.STUDENT.F1_Sales.ITEM_ID",
+        "rightColumn" : "physicalColumn:Student.STUDENT.D1_Item.ITEM_ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Student.STUDENT.D2_Stores",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Student.STUDENT.F1_Sales.STORE_ID",
+        "rightColumn" : "physicalColumn:Student.STUDENT.D2_Stores.STORE_ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Student.STUDENT.D0_Calendar",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Student.STUDENT.F1_Sales.SALES_DATE",
+        "rightColumn" : "physicalColumn:Student.STUDENT.D0_Calendar.DAY_DATE"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    } ]
+  }
+}

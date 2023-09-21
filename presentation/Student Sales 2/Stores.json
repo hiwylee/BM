@@ -1,0 +1,30 @@
+{
+  "presentationTable" : {
+    "name" : "Stores",
+    "presentationColumns" : [ {
+      "name" : "Store Id",
+      "sourceLogicalColumn" : "logicalColumn:Student BM2.D3 Stores.Store Id"
+    }, {
+      "name" : "Store",
+      "sourceLogicalColumn" : "logicalColumn:Student BM2.D3 Stores.Store"
+    }, {
+      "name" : "Buyer",
+      "sourceLogicalColumn" : "logicalColumn:Student BM2.D3 Stores.Buyer"
+    }, {
+      "name" : "Store Type",
+      "sourceLogicalColumn" : "logicalColumn:Student BM2.D3 Stores.Store Type"
+    }, {
+      "name" : "Street",
+      "sourceLogicalColumn" : "logicalColumn:Student BM2.D3 Stores.Street"
+    }, {
+      "name" : "State",
+      "sourceLogicalColumn" : "logicalColumn:Student BM2.D3 Stores.State"
+    }, {
+      "name" : "City",
+      "sourceLogicalColumn" : "logicalColumn:Student BM2.D3 Stores.City"
+    }, {
+      "name" : "Zip",
+      "sourceLogicalColumn" : "logicalColumn:Student BM2.D3 Stores.Zip"
+    } ]
+  }
+}

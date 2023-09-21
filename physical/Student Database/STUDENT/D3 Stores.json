@@ -1,0 +1,7 @@
+{
+  "physicalTable" : {
+    "name" : "D3 Stores",
+    "sourceTable" : "physicalTable:Student Database.STUDENT.STORES",
+    "overrideSourceCacheSetting" : false
+  }
+}

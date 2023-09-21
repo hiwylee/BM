@@ -1,0 +1,15 @@
+{
+  "subjectArea" : {
+    "name" : "Student Sales 2",
+    "sourceBusinessModel" : "businessModel:Student BM2",
+    "tableOrder" : [ {
+      "name" : "presentationTable:Student Sales 2.Time"
+    }, {
+      "name" : "presentationTable:Student Sales 2.Item"
+    }, {
+      "name" : "presentationTable:Student Sales 2.Stores"
+    }, {
+      "name" : "presentationTable:Student Sales 2.Sales"
+    } ]
+  }
+}

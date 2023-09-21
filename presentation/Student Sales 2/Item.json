@@ -1,0 +1,24 @@
+{
+  "presentationTable" : {
+    "name" : "Item",
+    "presentationColumns" : [ {
+      "name" : "Item Id",
+      "sourceLogicalColumn" : "logicalColumn:Student BM2.D2 Item.Item Id"
+    }, {
+      "name" : "Os",
+      "sourceLogicalColumn" : "logicalColumn:Student BM2.D2 Item.Os"
+    }, {
+      "name" : "Category",
+      "sourceLogicalColumn" : "logicalColumn:Student BM2.D2 Item.Category"
+    }, {
+      "name" : "Item Type",
+      "sourceLogicalColumn" : "logicalColumn:Student BM2.D2 Item.Item Type"
+    }, {
+      "name" : "Item Name",
+      "sourceLogicalColumn" : "logicalColumn:Student BM2.D2 Item.Item Name"
+    }, {
+      "name" : "Rrp",
+      "sourceLogicalColumn" : "logicalColumn:Student BM2.D2 Item.Rrp"
+    } ]
+  }
+}

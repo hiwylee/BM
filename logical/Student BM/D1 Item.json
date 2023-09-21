@@ -1,0 +1,147 @@
+{
+  "logicalTable" : {
+    "name" : "D1 Item",
+    "type" : "DIMENSION",
+    "primaryKey" : [ "Item Id" ],
+    "logicalColumns" : [ {
+      "name" : "Item Id",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "D1_Item",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Student.STUDENT.D1_Item.ITEM_ID" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Category"
+    }, {
+      "name" : "Os",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "D1_Item",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Student.STUDENT.D1_Item.OS" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Category"
+    }, {
+      "name" : "Category",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "D1_Item",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Student.STUDENT.D1_Item.CATEGORY" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Category"
+    }, {
+      "name" : "Item Type",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "D1_Item",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Student.STUDENT.D1_Item.ITEM_TYPE" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Category"
+    }, {
+      "name" : "Item Name",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "D1_Item",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Student.STUDENT.D1_Item.ITEM_NAME" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Category"
+    }, {
+      "name" : "Rrp",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "D1_Item",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:Student.STUDENT.D1_Item.RRP" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Category"
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "D1_Item",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:Student.STUDENT.D1_Item" ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "hierarchyType" : "LEVEL_BASED",
+    "levelBasedHierarchy" : {
+      "defaultRootLevel" : "합계",
+      "ragged" : false,
+      "skipped" : false,
+      "logicalLevels" : [ {
+        "name" : "합계",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : true,
+        "disableAggregateToHigherLevel" : false
+      }, {
+        "name" : "Category",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Category" ],
+        "displayKey" : "Category"
+      }, {
+        "name" : "Item Type",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Item Type" ],
+        "displayKey" : "Item Type",
+        "additionalKeys" : [ [ "Category" ] ]
+      }, {
+        "name" : "Item Name",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "Item Name" ],
+        "displayKey" : "Item Name",
+        "additionalKeys" : [ [ "Category", "Item Type" ] ]
+      } ],
+      "logicalHierarchies" : [ {
+        "name" : "By Category",
+        "levels" : [ "합계", "Category", "Item Type", "Item Name" ]
+      } ]
+    }
+  }
+}

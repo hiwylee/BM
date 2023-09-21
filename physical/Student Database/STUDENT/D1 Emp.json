@@ -1,0 +1,7 @@
+{
+  "physicalTable" : {
+    "name" : "D1 Emp",
+    "sourceTable" : "physicalTable:Student Database.STUDENT.EMP",
+    "overrideSourceCacheSetting" : false
+  }
+}

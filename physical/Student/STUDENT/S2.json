@@ -1,0 +1,14 @@
+{
+  "physicalTable" : {
+    "name" : "S2",
+    "sourceType" : "SELECT",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT * FROM STUDENT.Salea"
+    } ],
+    "caching" : {
+      "enable" : false,
+      "expiryTime" : 0
+    }
+  }
+}

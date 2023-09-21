@@ -1,0 +1,47 @@
+{
+  "presentationTable" : {
+    "name" : "Calendar",
+    "presentationColumns" : [ {
+      "name" : "Day Date",
+      "sourceLogicalColumn" : "logicalColumn:Student BM.D0 Calendar.Day Date"
+    }, {
+      "name" : "Mth Nm",
+      "sourceLogicalColumn" : "logicalColumn:Student BM.D0 Calendar.Mth Nm"
+    }, {
+      "name" : "Mth#",
+      "sourceLogicalColumn" : "logicalColumn:Student BM.D0 Calendar.Mth#"
+    }, {
+      "name" : "Mth# Nm",
+      "sourceLogicalColumn" : "logicalColumn:Student BM.D0 Calendar.Mth# Nm"
+    }, {
+      "name" : "Qtr",
+      "sourceLogicalColumn" : "logicalColumn:Student BM.D0 Calendar.Qtr"
+    }, {
+      "name" : "Year",
+      "sourceLogicalColumn" : "logicalColumn:Student BM.D0 Calendar.Year"
+    }, {
+      "name" : "Per Year Month#",
+      "sourceLogicalColumn" : "logicalColumn:Student BM.D0 Calendar.Per Y Mth#"
+    } ],
+    "hierarchies" : [ {
+      "name" : "DT",
+      "sourceLogicalTable" : "logicalTable:Student BM.D0 Calendar",
+      "localization" : { },
+      "levels" : [ {
+        "name" : "합계",
+        "sourceLogicalLevel" : "logicalLevel:Student BM.D0 Calendar.합계",
+        "localization" : { }
+      }, {
+        "name" : "Year",
+        "sourceLogicalLevel" : "logicalLevel:Student BM.D0 Calendar.Year",
+        "displayColumn" : "presentationColumn:Student Sales.Calendar.Year",
+        "localization" : { }
+      }, {
+        "name" : "Mon",
+        "sourceLogicalLevel" : "logicalLevel:Student BM.D0 Calendar.Mon",
+        "displayColumn" : "presentationColumn:Student Sales.Calendar.Mth Nm",
+        "localization" : { }
+      } ]
+    } ]
+  }
+}

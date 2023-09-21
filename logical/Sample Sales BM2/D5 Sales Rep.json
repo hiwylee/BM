@@ -1,0 +1,155 @@
+{
+  "logicalTable" : {
+    "name" : "D5 Sales Rep",
+    "type" : "DIMENSION",
+    "logicalColumns" : [ {
+      "name" : "Sales Rep Name",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "D50 Sales Rep",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D50 Sales Rep.EMPL_NAME" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Sales Rep Number",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "D50 Sales Rep",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D50 Sales Rep.EMPLOYEE_KEY" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Hire Date",
+      "dataType" : "DATETIME",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "D50 Sales Rep",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D50 Sales Rep.HIRE_DT" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Manager Number",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "D50 Sales Rep",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D50 Sales Rep.MGR_ID" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Postn Key",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "D50 Sales Rep",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D50 Sales Rep.POSTN_KEY" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Sales Rep Type",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "D50 Sales Rep",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D50 Sales Rep.TYPE" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Enter Closure Distance",
+      "dataType" : "NUMERIC",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "D50 Sales Rep",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D51 Sales Rep Parent Child.DISTANCE" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Enter Position",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "D50 Sales Rep",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D52 Sales Rep Position.POSTN_DESC" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "Enter Position Level",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "D50 Sales Rep",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MySampleSalesDatabase.BISAMPLE.D52 Sales Rep Position.POSTN_LEVEL" ]
+          }
+        } ]
+      }
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "D50 Sales Rep",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:MySampleSalesDatabase.BISAMPLE.D50 Sales Rep", "physicalTable:MySampleSalesDatabase.BISAMPLE.D51 Sales Rep Parent Child", "physicalTable:MySampleSalesDatabase.BISAMPLE.D52 Sales Rep Position" ],
+        "logicalTableSourceJoins" : [ {
+          "leftTable" : "physicalTable:MySampleSalesDatabase.BISAMPLE.D51 Sales Rep Parent Child",
+          "rightTable" : "physicalTable:MySampleSalesDatabase.BISAMPLE.D50 Sales Rep",
+          "joinType" : "INNER",
+          "disable" : false
+        }, {
+          "leftTable" : "physicalTable:MySampleSalesDatabase.BISAMPLE.D50 Sales Rep",
+          "rightTable" : "physicalTable:MySampleSalesDatabase.BISAMPLE.D52 Sales Rep Position",
+          "joinType" : "INNER",
+          "disable" : false
+        } ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "primaryKey" : [ "Sales Rep Number" ]
+  }
+}

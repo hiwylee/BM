@@ -1,0 +1,46 @@
+{
+  "presentationTable" : {
+    "name" : "Item",
+    "presentationColumns" : [ {
+      "name" : "Os",
+      "sourceLogicalColumn" : "logicalColumn:Student BM.D1 Item.Os"
+    }, {
+      "name" : "Category",
+      "sourceLogicalColumn" : "logicalColumn:Student BM.D1 Item.Category"
+    }, {
+      "name" : "Item Type",
+      "sourceLogicalColumn" : "logicalColumn:Student BM.D1 Item.Item Type"
+    }, {
+      "name" : "Item Name",
+      "sourceLogicalColumn" : "logicalColumn:Student BM.D1 Item.Item Name"
+    }, {
+      "name" : "Rrp",
+      "sourceLogicalColumn" : "logicalColumn:Student BM.D1 Item.Rrp"
+    } ],
+    "hierarchies" : [ {
+      "name" : "By Category",
+      "sourceLogicalTable" : "logicalTable:Student BM.D1 Item",
+      "localization" : { },
+      "levels" : [ {
+        "name" : "합계",
+        "sourceLogicalLevel" : "logicalLevel:Student BM.D1 Item.합계",
+        "localization" : { }
+      }, {
+        "name" : "Category",
+        "sourceLogicalLevel" : "logicalLevel:Student BM.D1 Item.Category",
+        "displayColumn" : "presentationColumn:Student Sales.Item.Category",
+        "localization" : { }
+      }, {
+        "name" : "Item Type",
+        "sourceLogicalLevel" : "logicalLevel:Student BM.D1 Item.Item Type",
+        "displayColumn" : "presentationColumn:Student Sales.Item.Item Type",
+        "localization" : { }
+      }, {
+        "name" : "Item Name",
+        "sourceLogicalLevel" : "logicalLevel:Student BM.D1 Item.Item Name",
+        "displayColumn" : "presentationColumn:Student Sales.Item.Item Name",
+        "localization" : { }
+      } ]
+    } ]
+  }
+}

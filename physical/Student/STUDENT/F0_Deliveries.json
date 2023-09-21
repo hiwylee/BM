@@ -1,0 +1,35 @@
+{
+  "physicalTable" : {
+    "name" : "F0_Deliveries",
+    "sourceTable" : "physicalTable:Student.STUDENT.DELIVERIES",
+    "overrideSourceCacheSetting" : false,
+    "joins" : [ {
+      "rightTable" : "physicalTable:Student.STUDENT.F1_Sales",
+      "useJoinExpression" : true,
+      "joinExpression" : {
+        "expressionTemplate" : "%1 = %2",
+        "expressionObjects" : [ "physicalColumn:Student.STUDENT.F0_Deliveries.ORDER_#", "physicalColumn:Student.STUDENT.F1_Sales.ORDER_#" ]
+      },
+      "joinType" : "INNER",
+      "cardinality" : "ONE_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Student.STUDENT.D2_Stores",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Student.STUDENT.F0_Deliveries.DELIVERY_STORE_ID",
+        "rightColumn" : "physicalColumn:Student.STUDENT.D2_Stores.STORE_ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Student.STUDENT.D0_Calendar",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Student.STUDENT.F0_Deliveries.DELIVERY_DATE",
+        "rightColumn" : "physicalColumn:Student.STUDENT.D0_Calendar.DAY_DATE"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    } ]
+  }
+}

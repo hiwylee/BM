@@ -1,0 +1,33 @@
+{
+  "presentationTable" : {
+    "name" : "Sales Rep",
+    "presentationColumns" : [ {
+      "name" : "Sales Rep Name",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.D5 Sales Rep.Sales Rep Name"
+    }, {
+      "name" : "Sales Rep Number",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.D5 Sales Rep.Sales Rep Number"
+    }, {
+      "name" : "Hire Date",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.D5 Sales Rep.Hire Date"
+    }, {
+      "name" : "Manager Number",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.D5 Sales Rep.Manager Number"
+    }, {
+      "name" : "Postn Key",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.D5 Sales Rep.Postn Key"
+    }, {
+      "name" : "Sales Rep Type",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.D5 Sales Rep.Sales Rep Type"
+    }, {
+      "name" : "Enter Closure Distance",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.D5 Sales Rep.Enter Closure Distance"
+    }, {
+      "name" : "Enter Position",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.D5 Sales Rep.Enter Position"
+    }, {
+      "name" : "Enter Position Level",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.D5 Sales Rep.Enter Position Level"
+    } ]
+  }
+}

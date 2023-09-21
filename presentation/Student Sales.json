@@ -1,0 +1,15 @@
+{
+  "subjectArea" : {
+    "name" : "Student Sales",
+    "sourceBusinessModel" : "businessModel:Student BM",
+    "tableOrder" : [ {
+      "name" : "presentationTable:Student Sales.Calendar"
+    }, {
+      "name" : "presentationTable:Student Sales.Stores"
+    }, {
+      "name" : "presentationTable:Student Sales.Item"
+    }, {
+      "name" : "presentationTable:Student Sales.Sales"
+    } ]
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "presentationTable" : {
+    "name" : "Products",
+    "presentationColumns" : [ {
+      "name" : "Brand",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.D2 Products.Brand"
+    }, {
+      "name" : "Product",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.D2 Products.Prod Dsc"
+    }, {
+      "name" : "Type",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.D2 Products.Type"
+    }, {
+      "name" : "Line Of Business",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.D2 Products.Lob"
+    }, {
+      "name" : "Sequence",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.D2 Products.Sequence"
+    }, {
+      "name" : "Brand Key",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.D2 Products.Brand Key"
+    }, {
+      "name" : "Lob Key",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.D2 Products.Lob Key"
+    }, {
+      "name" : "Type Key",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.D2 Products.Type Key"
+    }, {
+      "name" : "Prod key",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.D2 Products.Prod Key"
+    }, {
+      "name" : "Prod Dsc",
+      "sourceLogicalColumn" : "logicalColumn:Sample Sales BM2.D2 Products.Prod Dsc"
+    } ],
+    "hierarchies" : [ {
+      "name" : "H1",
+      "sourceLogicalTable" : "logicalTable:Sample Sales BM2.D2 Products",
+      "localization" : { },
+      "levels" : [ {
+        "name" : "합계",
+        "sourceLogicalLevel" : "logicalLevel:Sample Sales BM2.D2 Products.합계",
+        "localization" : { }
+      }, {
+        "name" : "세부정보",
+        "sourceLogicalLevel" : "logicalLevel:Sample Sales BM2.D2 Products.세부정보",
+        "displayColumn" : "presentationColumn:Sample Sales2.Products.Prod key",
+        "localization" : { }
+      }, {
+        "name" : "Product Brand",
+        "sourceLogicalLevel" : "logicalLevel:Sample Sales BM2.D2 Products.Product Brand",
+        "displayColumn" : "presentationColumn:Sample Sales2.Products.Brand",
+        "localization" : { }
+      }, {
+        "name" : "Product  Lob",
+        "sourceLogicalLevel" : "logicalLevel:Sample Sales BM2.D2 Products.Product  Lob",
+        "displayColumn" : "presentationColumn:Sample Sales2.Products.Line Of Business",
+        "localization" : { }
+      }, {
+        "name" : "Product Type",
+        "sourceLogicalLevel" : "logicalLevel:Sample Sales BM2.D2 Products.Product Type",
+        "displayColumn" : "presentationColumn:Sample Sales2.Products.Type",
+        "localization" : { }
+      } ]
+    } ]
+  }
+}

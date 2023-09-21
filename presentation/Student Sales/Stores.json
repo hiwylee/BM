@@ -1,0 +1,47 @@
+{
+  "presentationTable" : {
+    "name" : "Stores",
+    "presentationColumns" : [ {
+      "name" : "Store",
+      "sourceLogicalColumn" : "logicalColumn:Student BM.D2 Stores.Store"
+    }, {
+      "name" : "Buyer",
+      "sourceLogicalColumn" : "logicalColumn:Student BM.D2 Stores.Buyer"
+    }, {
+      "name" : "Store Type",
+      "sourceLogicalColumn" : "logicalColumn:Student BM.D2 Stores.Store Type"
+    }, {
+      "name" : "Street",
+      "sourceLogicalColumn" : "logicalColumn:Student BM.D2 Stores.Street"
+    }, {
+      "name" : "State",
+      "sourceLogicalColumn" : "logicalColumn:Student BM.D2 Stores.State"
+    }, {
+      "name" : "City",
+      "sourceLogicalColumn" : "logicalColumn:Student BM.D2 Stores.City"
+    }, {
+      "name" : "Zip",
+      "sourceLogicalColumn" : "logicalColumn:Student BM.D2 Stores.Zip"
+    } ],
+    "hierarchies" : [ {
+      "name" : "StatsH",
+      "sourceLogicalTable" : "logicalTable:Student BM.D2 Stores",
+      "localization" : { },
+      "levels" : [ {
+        "name" : "합계",
+        "sourceLogicalLevel" : "logicalLevel:Student BM.D2 Stores.합계",
+        "localization" : { }
+      }, {
+        "name" : "State",
+        "sourceLogicalLevel" : "logicalLevel:Student BM.D2 Stores.State",
+        "displayColumn" : "presentationColumn:Student Sales.Stores.State",
+        "localization" : { }
+      }, {
+        "name" : "City",
+        "sourceLogicalLevel" : "logicalLevel:Student BM.D2 Stores.City",
+        "displayColumn" : "presentationColumn:Student Sales.Stores.City",
+        "localization" : { }
+      } ]
+    } ]
+  }
+}

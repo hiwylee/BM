@@ -1,0 +1,24 @@
+{
+  "initBlock" : {
+    "name" : "Current Periods",
+    "type" : "GLOBAL",
+    "connectionPool" : "connectionPool:MySampleSalesDatabase.BISAMPLE_POOL",
+    "selectStatements" : [ {
+      "databaseType" : "DEFAULT",
+      "query" : "SELECT CALENDAR_DATE, PER_NAME_MONTH, PER_NAME_YEAR FROM BISAMPLE.SAMP_TIME_DAY_D WHERE CALENDAR_DATE = (SELECT MAX(BILL_DAY_DT) FROM BISAMPLE.SAMP_REVENUE_F)"
+    } ],
+    "variables" : [ {
+      "name" : "CurrentDay"
+    }, {
+      "name" : "CurrentMonth"
+    }, {
+      "name" : "CurrentYear"
+    } ],
+    "runSchedule" : {
+      "interval" : 1,
+      "intervalUnit" : "HOURS",
+      "startingOn" : "2023-09-21 05:36:59.618"
+    },
+    "disable" : true
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "physicalTable" : {
+    "name" : "D3_Warehouse",
+    "sourceTable" : "physicalTable:Student.STUDENT.WAREHOUSE",
+    "overrideSourceCacheSetting" : false
+  }
+}

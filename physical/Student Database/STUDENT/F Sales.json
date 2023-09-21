@@ -1,0 +1,35 @@
+{
+  "physicalTable" : {
+    "name" : "F Sales",
+    "sourceTable" : "physicalTable:Student Database.STUDENT.SALES",
+    "overrideSourceCacheSetting" : false,
+    "joins" : [ {
+      "rightTable" : "physicalTable:Student Database.STUDENT.D0 Time",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Student Database.STUDENT.F Sales.SALES_DATE",
+        "rightColumn" : "physicalColumn:Student Database.STUDENT.D0 Time.DAY_DATE"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Student Database.STUDENT.D3 Stores",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Student Database.STUDENT.F Sales.STORE_ID",
+        "rightColumn" : "physicalColumn:Student Database.STUDENT.D3 Stores.STORE_ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:Student Database.STUDENT.D2 Item",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:Student Database.STUDENT.F Sales.ITEM_ID",
+        "rightColumn" : "physicalColumn:Student Database.STUDENT.D2 Item.ITEM_ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    } ]
+  }
+}

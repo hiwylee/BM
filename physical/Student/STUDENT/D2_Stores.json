@@ -1,0 +1,17 @@
+{
+  "physicalTable" : {
+    "name" : "D2_Stores",
+    "sourceTable" : "physicalTable:Student.STUDENT.STORES",
+    "overrideSourceCacheSetting" : false,
+    "joins" : [ {
+      "rightTable" : "physicalTable:Student.STUDENT.D3_Warehouse",
+      "useJoinExpression" : true,
+      "joinExpression" : {
+        "expressionTemplate" : "%1=%2",
+        "expressionObjects" : [ "physicalColumn:Student.STUDENT.D2_Stores.STORE_ID", "physicalColumn:Student.STUDENT.D3_Warehouse.STORE_ID" ]
+      },
+      "joinType" : "INNER",
+      "cardinality" : "ONE_TO_ONE"
+    } ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "physicalTable" : {
+    "name" : "F1 Revenue",
+    "sourceTable" : "physicalTable:MySampleSalesDatabase.BISAMPLE.SAMP_REVENUE_F",
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    },
+    "overrideSourceCacheSetting" : false,
+    "joins" : [ {
+      "rightTable" : "physicalTable:MySampleSalesDatabase.BISAMPLE.D1 Time",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:MySampleSalesDatabase.BISAMPLE.F1 Revenue.BILL_DAY_DT",
+        "rightColumn" : "physicalColumn:MySampleSalesDatabase.BISAMPLE.D1 Time.CALENDAR_DATE"
+      } ]
+    }, {
+      "rightTable" : "physicalTable:MySampleSalesDatabase.BISAMPLE.D2 Products",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:MySampleSalesDatabase.BISAMPLE.F1 Revenue.PROD_KEY",
+        "rightColumn" : "physicalColumn:MySampleSalesDatabase.BISAMPLE.D2 Products.PROD_KEY"
+      } ]
+    }, {
+      "rightTable" : "physicalTable:MySampleSalesDatabase.BISAMPLE.D3 Customers",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:MySampleSalesDatabase.BISAMPLE.F1 Revenue.CUST_KEY",
+        "rightColumn" : "physicalColumn:MySampleSalesDatabase.BISAMPLE.D3 Customers.CUST_KEY"
+      } ]
+    }, {
+      "rightTable" : "physicalTable:MySampleSalesDatabase.BISAMPLE.D51 Sales Rep Parent Child",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:MySampleSalesDatabase.BISAMPLE.F1 Revenue.EMPL_KEY",
+        "rightColumn" : "physicalColumn:MySampleSalesDatabase.BISAMPLE.D51 Sales Rep Parent Child.MEMBER_KEY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    } ]
+  }
+}

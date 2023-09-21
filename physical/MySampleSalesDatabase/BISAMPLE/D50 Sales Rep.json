@@ -1,0 +1,17 @@
+{
+  "physicalTable" : {
+    "name" : "D50 Sales Rep",
+    "sourceTable" : "physicalTable:MySampleSalesDatabase.BISAMPLE.SAMP_EMPL_D_VH",
+    "overrideSourceCacheSetting" : false,
+    "joins" : [ {
+      "rightTable" : "physicalTable:MySampleSalesDatabase.BISAMPLE.D52 Sales Rep Position",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:MySampleSalesDatabase.BISAMPLE.D50 Sales Rep.POSTN_KEY",
+        "rightColumn" : "physicalColumn:MySampleSalesDatabase.BISAMPLE.D52 Sales Rep Position.POSTN_KEY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    } ]
+  }
+}
